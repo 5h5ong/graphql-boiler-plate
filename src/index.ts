@@ -1,18 +1,8 @@
 import { GraphQLServer } from "graphql-yoga";
 import * as morgan from "morgan";
+import schema from "./schema";
 
-const typeDefs = `
-  type Query {
-    hello: String!
-  }
-`;
-const resolvers = {
-  Query: {
-    hello: () => "hello!"
-  }
-};
-
-const server = new GraphQLServer({ typeDefs, resolvers });
+const server = new GraphQLServer({ schema });
 
 // logger
 server.use(morgan("dev"));
