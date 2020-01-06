@@ -1,0 +1,10 @@
+node_modules
+
+# yarn
+yarn.lock
+
+# env file !IMPORTANT !DO NOT TOUCH !IT CONTAINS SYSTEM ENV
+.env
+
+# build folder
+build
